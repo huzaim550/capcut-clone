@@ -45,14 +45,14 @@ dependencyResolutionManagement {
 rootProject.name = "Reelforge"
 
 include(":core:common")
+include(":core:model")
+include(":editor:engine")
 // The remaining modules are added back as they are implemented; Gradle fails
 // on an include() whose directory does not exist yet.
 // include(":app")
-// include(":core:model")
 // include(":core:database")
 // include(":core:media")
 // include(":core:designsystem")
-// include(":editor:engine")
 // include(":playback")
 // include(":processing")
 // include(":feature:home")

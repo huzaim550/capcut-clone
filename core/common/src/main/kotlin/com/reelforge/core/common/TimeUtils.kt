@@ -64,7 +64,7 @@ object TimeUtils {
     fun formatTimecode(millis: Long, framesPerSecond: Double): String {
         if (framesPerSecond <= 0.0) return formatClock(millis)
         val clamped = millis.coerceAtLeast(0L)
-        val frame = ((clamped % MILLIS_PER_SECOND) / MILLIS_PER_SECOND * framesPerSecond).toInt()
+        val frame = ((clamped % MILLIS_PER_SECOND).toDouble() / MILLIS_PER_SECOND * framesPerSecond).toInt()
         val maxFrame = Math.ceil(framesPerSecond).toInt().coerceAtLeast(1) - 1
         return "%s:%02d".format(formatClock(clamped), frame.coerceIn(0, maxFrame))
     }
