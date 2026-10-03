@@ -46,15 +46,15 @@ rootProject.name = "Reelforge"
 
 include(":core:common")
 include(":core:model")
+include(":core:database")
+include(":core:designsystem")
 include(":editor:engine")
+include(":feature:home")
+include(":app")
 // The remaining modules are added back as they are implemented; Gradle fails
 // on an include() whose directory does not exist yet.
-// include(":app")
-// include(":core:database")
 // include(":core:media")
-// include(":core:designsystem")
 // include(":playback")
 // include(":processing")
-// include(":feature:home")
 // include(":feature:editor")
 // include(":feature:export")
